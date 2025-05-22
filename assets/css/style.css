@@ -171,6 +171,11 @@ body {
         object-fit: cover;
         border-radius: 2rem 2rem 0 0;
     }
+    .preview--img{
+        background-color: black;
+        border-radius: 1.2rem;
+        border-radius: 2rem 2rem 0 0;
+    }
     .preview-content{
         border-radius: 0 0 2rem 2rem;
         padding: 2.6rem;
