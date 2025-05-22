@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-outfit);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ROOT */
+
+:root {
+  /* Colors: HSL (Hue, Saturation, Lightness) */
+  --Green-500: hsl(158, 36%, 37%);
+  --Green-700: hsl(158, 42%, 18%);
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font Families */
+  --font-Montserrat: "Montserrat", sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+    height: 100vh;
+    padding: 0 2rem;
+}
+.preview-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 70rem;
+}
+.preview--img{
+    background-color: black;
+    border-radius: 1.2rem;
+    border-radius: 2rem 0 0 2rem;
+}
+.img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    border-radius: 2rem 0 0 2rem;
+}
+.preview-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--White);
+    border-radius: 0 2rem 2rem 0;
+    padding: clamp(1.2rem, calc(1.2rem + ((1vw - 0.32rem) * 2.5)), 4rem);
+}
+.category{
+    font-size: 1.2rem;
+    font-family: var(--font-Montserrat);
+    margin-bottom: 2rem;
+    color: var(--Grey);
+}
+.heading{
+    line-height: clamp(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 0.8929)), 3.8rem);
+    margin-bottom: 2rem;
+}
+.heading--lable{
+    font-size: clamp(2.4rem, calc(2.4rem + ((1vw - 0.32rem) * 1.4286)), 4rem);
+}
+.description{
+    font-size: clamp(1.2rem, calc(1.2rem + ((1vw - 0.32rem) * 0.3571)), 1.6rem);
+    font-weight: 500;
+    color: var(--Grey);
+    font-family: var(--font-Montserrat);
+    margin-bottom: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 0.8929)), 3rem);
+    padding-right: 2rem;
+}
+.pricing{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+}
+.price{
+    font-size: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 1.7857)), 4rem);
+    font-family: var(--font-Montserrat);
+    color: var(--Green-500);
+    
+}
+.discount{
+    font-size: 2rem;
+    color: var(--Grey);
+    text-decoration: line-through;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    padding: 1rem 0;
+    background-color: var(--Green-500);
+    color: var(--Cream);
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--font-Montserrat);
+    border: none;
+    border-radius: 1.2rem;
+}
+.btn-img{
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (max-width: 600px) {
+    .container{
+        padding: 2rem;
+        height: 100%;
+    }
+
+     .preview-card{
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 70rem;
+    }
+    .img{
+        height: 24rem;
+        object-fit: cover;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .preview-content{
+        border-radius: 0 0 2rem 2rem;
+        padding: 2.6rem;
+    }
+} 
