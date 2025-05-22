@@ -140,6 +140,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     gap: 1.4rem;
     padding: 1rem 0;
     background-color: var(--Green-500);
@@ -149,6 +150,12 @@ body {
     font-family: var(--font-Montserrat);
     border: none;
     border-radius: 1.2rem;
+}
+.card-button:hover{
+    cursor: pointer;
+    background-color: var(--Green-700);
+    transition: all 0.3s;
+    color: var(--White);
 }
 .btn-img{
     width: 2rem;
